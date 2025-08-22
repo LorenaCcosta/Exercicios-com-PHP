@@ -7,10 +7,10 @@
 </head>
 <body>
     <form>
-        <label for="numero1">Digite o número:
-        <input type="number" name="numero" id="numero">
-        </label>
+        <label for="numero">Digite o número:</label>
+        <input type="number" name="numero" id="numero"><br>
 
+        Clique em <strong>concluir</strong> para saber se é o número é disiviel por 10, 5 e 2:
         <input type="submit" value="Concluir">
     </form>
 
@@ -31,10 +31,7 @@
           }else{
             echo "<h3>Não é divisível por 2, 5 ou 10<h3>";
           }
-
         }
-
-
     ?>
 
     <a href="index.php">

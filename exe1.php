@@ -8,15 +8,13 @@
 </head>
 <body>
     <form>
-        <label for="numero1">Digite o primeiro número:
+        <label for="numero1">Digite o primeiro número:</label>
         <input type="number" name="numero1" id="numero1">
-        </label>
 
-        <label for="numero2">Digite o segundo número:
+        <label for="numero2">Digite o segundo número:</label>
         <input type="number" name="numero2" id="numero2">
-        </label>
 
-        <input type="submit" value="Somar">
+        <input type="submit" value="Somar"><br>
     </form>
 
     <?php
@@ -27,12 +25,13 @@
             $soma = $num1 + $num2;
 
             if($soma > 20) {
-                echo $soma + 8;
+                echo $soma . " + 8 = " . $soma + 8; 
             } else{
-                echo $soma - 5;
+                echo $soma . " - 5 = " . $soma - 5;
             }
         }
     ?>
+    <br>
 
     <a href="index.php">
         <input type="button" value="Voltar para a página Inicial">
