@@ -8,14 +8,12 @@
 </head>
 
 <body>
-    <h3>Ordenar Números</h3>
+    <h3>Ordenar em ordem decrescente</h3>
 
     <form method="get">
         <div>
-            <div>
-                <label for="numero1">Digite o primeiro número:</label>
-                <input type="number" name="numero1" id="numero1">
-            </div>
+            <label for="numero1">Digite o primeiro número:</label>
+            <input type="number" name="numero1" id="numero1">
 
             <label for="numero2">Digite o segundo número:</label>
             <input type="number" name="numero2" id="numero2">

@@ -3,45 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercicios 3</title>
+
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            justify-content: center;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 18px;
+            color: #535353ff;
+        }
+        .form {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            margin-bottom: 5px;
+            font-weight: lighter;
+            font-size: 18px;
+            color: #373737ff;
+        }
+        .input_number {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .input_submit {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 18px;
+        }
+        .input_submit:hover {
+            background-color: #218838;
+        }
+        .input_voltar {
+            padding: 10px;
+            background-color: #ffffffff;
+            color: #373737ff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            justify-content: left;
+            width: 100%;
+        }
+        .input_voltar:hover {
+            background-color: #f0f0f0;
+        }
+        .text_echo {
+            font-size: 14px;
+            color: #333;
+            font-weight: bolder;
+        }
+        .container_echo {
+            background-color: #e6edf3ff;
+            padding:20px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin-bottom: 18px;
+        }
+        .close_result {
+            float: right;
+            cursor: pointer;
+            color: #888;
+            margin-top: -14px;
+            margin-right: -12px;
+        }
+    </style>
 </head>
 <body>
-    <form>
-        <label for="nome">Digite o seu nome:
-        <input type="text" name="nome" id="nome">
-        </label>
+    <div class="container">
+        <form class="form">
+            <label for="nome" class="label">Digite o seu nome:</label>
+            <input type="text" name="nome" id="nome" class="input_number">
 
-        <label for="sexo">Sexo:</label>
-            <select id="sexo" name="sexo">
-                <option value="feminino">Feminino</option>
-                <option value="masculino">Masculino</option>
-            </select>
+            <label for="sexo" class="label">Sexo:</label>
+                <select id="sexo" name="sexo" class="input_number">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
 
-        <label for="idade">Digite sua idade:</label>
-        <input type="number" name="idade" id="idade">
+            <label for="idade" class="label">Digite sua idade:</label>
+            <input type="number" name="idade" id="idade" class="input_number">
 
-        <input type="submit" value="Concluir"><br>
-    </form>
+            <input type="submit" value="Concluir" class="input_submit">
+        </form>
 
-    <?php
-        if(isset($_GET["nome"]) && isset($_GET["sexo"]) && isset($_GET["idade"])) {
-            $nome = $_GET["nome"];
-            $idade = $_GET["idade"];
-            $sexo = $_GET["sexo"];
+        <?php
+            if(isset($_GET["nome"]) && isset($_GET["sexo"]) && isset($_GET["idade"])) {
+                $nome = $_GET["nome"];
+                $idade = $_GET["idade"];
+                $sexo = $_GET["sexo"];
 
-            if($sexo == "feminino" && $idade < 25){
-                echo "Olá $nome, você foi: ";
-                echo "<strong>ACEITO(A)</strong";
-            }else{
-                echo "Olá $nome, você foi: ";
-                echo "<strong>NÃO ACEITO(A)</strong";
+                echo '<div class="container_echo" id="resultado">';
+
+                echo '<span class="close_result" onclick="close_result()"><i class="fa-solid fa-xmark"></i></span>';
+
+                    if($sexo == "feminino" && $idade < 25){
+                        echo "Olá $nome, você foi: ";
+                        echo "<strong>ACEITO(A)</strong";
+                    }else{
+                        echo "Olá $nome, você foi: ";
+                        echo "<strong>NÃO ACEITO(A)</strong";
+                    }
+
+                echo '</div>';
             }
-        }
-    ?>
-    <br>
+        ?>
 
-    <a href="index.php">
-        <input type="button" value="Voltar para a página Inicial">
-    </a>
+        <a href="index.php">
+            <input type="button" value="Voltar ao início" class="input_voltar">
+        </a>
+    </div>
 </body>
 </html>

@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form method="get">
+        <label for="numero" class="label">Digite o número:</label>
+        <input type="number" name="numero" id="numero" class="input_number">
+    </form>
+
+    <?php
+
+        switch
+    ?>
 </body>
 </html>
