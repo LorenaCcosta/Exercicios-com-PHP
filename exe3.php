@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios 3</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <style>
         .container {
@@ -118,11 +119,11 @@
                 echo '<span class="close_result" onclick="close_result()"><i class="fa-solid fa-xmark"></i></span>';
 
                     if($sexo == "feminino" && $idade < 25){
-                        echo "Olá $nome, você foi: ";
-                        echo "<strong>ACEITO(A)</strong";
-                    }else{
-                        echo "Olá $nome, você foi: ";
-                        echo "<strong>NÃO ACEITO(A)</strong";
+                        echo '<div class="text_echo">Olá ' . $nome . ', você foi: <strong>ACEITO(A)</strong> </div>';
+                    }else if(){
+                        echo '<div class="text_echo"> <span>Por favor digite os campos em branco!</span> </div>';
+                    } else {
+                        echo '<div class="text_echo">Olá ' . $nome . ', você <strong>NÃO  FOI ACEITO(A)</strong> </div>';
                     }
 
                 echo '</div>';
@@ -133,5 +134,11 @@
             <input type="button" value="Voltar ao início" class="input_voltar">
         </a>
     </div>
+
+    <script>
+            function close_result(){
+            document.getElementById("resultado").style.display = "none";
+        }
+    </script>
 </body>
 </html>
