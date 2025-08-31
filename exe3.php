@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicios 3</title>
+    <title>Validação</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -18,17 +18,17 @@
             text-align: center;
             justify-content: center;
         }
-        .title {
+        h2 {
             text-align: center;
             margin-bottom: 18px;
             color: #535353ff;
         }
-        .form {
+        form {
             text-align: left;
             display: flex;
             flex-direction: column;
         }
-        .label {
+        label {
             margin-bottom: 5px;
             font-weight: lighter;
             font-size: 18px;
@@ -92,18 +92,19 @@
 </head>
 <body>
     <div class="container">
-        <form class="form">
-            <label for="nome" class="label">Digite o seu nome:</label>
-            <input type="text" name="nome" id="nome" class="input_number">
+        <h2>Validação</h2>
+        <form>
+            <label for="nome">Digite o seu nome:</label>
+            <input type="text" name="nome" id="nome" class="input_number" required>
 
-            <label for="sexo" class="label">Sexo:</label>
+            <label for="sexo">Sexo:</label>
                 <select id="sexo" name="sexo" class="input_number">
                     <option value="feminino">Feminino</option>
                     <option value="masculino">Masculino</option>
                 </select>
 
-            <label for="idade" class="label">Digite sua idade:</label>
-            <input type="number" name="idade" id="idade" class="input_number">
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" name="idade" id="idade" class="input_number" required>
 
             <input type="submit" value="Concluir" class="input_submit">
         </form>
@@ -120,8 +121,6 @@
 
                     if($sexo == "feminino" && $idade < 25){
                         echo '<div class="text_echo">Olá ' . $nome . ', você foi: <strong>ACEITO(A)</strong> </div>';
-                    }else if(){
-                        echo '<div class="text_echo"> <span>Por favor digite os campos em branco!</span> </div>';
                     } else {
                         echo '<div class="text_echo">Olá ' . $nome . ', você <strong>NÃO  FOI ACEITO(A)</strong> </div>';
                     }

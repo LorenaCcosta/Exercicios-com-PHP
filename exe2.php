@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicios 2</title>
+    <title>Divisivel por 10, 5 e 2</title>
   
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     
@@ -19,17 +19,17 @@
             text-align: center;
             justify-content: center;
         }
-        .title {
+        h2 {
             text-align: center;
             margin-bottom: 18px;
             color: #535353ff;
         }
-        .form {
+        form {
             text-align: left;
             display: flex;
             flex-direction: column;
         }
-        .label {
+        label {
             margin-bottom: 5px;
             font-weight: lighter;
             font-size: 18px;
@@ -93,11 +93,11 @@
 </head>
 <body>
   <div class="container">
-    <h2 class="title">Saiba se o número é divisivel por 10, 5 e 2</h2>
-    <form method="get" class="form">
+    <h2>Saiba se o número é divisivel por 10, 5 e 2</h2>
+    <form>
 
-        <label for="numero" class="label">Digite o número:</label>
-        <input type="number" name="numero" id="numero" class="input_number">
+        <label for="numero">Digite o número:</label>
+        <input type="number" name="numero" id="numero" class="input_number" required>
 
         <input type="submit" value="Concluir" class="input_submit">
     </form>
@@ -110,19 +110,15 @@
 
             echo '<span class="close_result" onclick="close_result()"><i class="fa-solid fa-xmark"></i></span>';
 
-           if($num % 10 == 0){
+           if($num % 10 === 0){
 
-            echo '<div class="text_echo">É divisivel por 10. </div>';
-           }
-
-           if($num % 5 == 0){
+            echo '<div class="text_echo">É divisivel por 10, 5 e 2. </div>';
+           } else if($num % 5 === 0){
             echo '<div class="text_echo">É divisivel por 5. </div>';
-          }
-
-          if($num % 2 == 0){
+          } else if($num % 2 === 0){
             echo '<div class="text_echo">É divisivel por 2. </div>';
 
-          }else{
+          } else{
             echo '<div class="text_echo">Não é divisivel por 10, 5, ou 2. </div>';
           }
           echo '</div>';

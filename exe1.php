@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exércicio 1</title>
+    <title>Somar Números</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -18,17 +18,17 @@
             text-align: center;
             justify-content: center;
         }
-        .title {
+        h2 {
             text-align: center;
             margin-bottom: 18px;
             color: #535353ff;
         }
-        .form {
+        form {
             text-align: left;
             display: flex;
             flex-direction: column;
         }
-        .label {
+        label {
             margin-bottom: 5px;
             font-weight: lighter;
             font-size: 18px;
@@ -92,15 +92,15 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="title">Somar Números</h2>
-        <form method="get" class="form">
-            <label for="numero1" class="label">Digite o primeiro número:</label>
-            <input type="number" name="numero1" id="numero1" class="input_number"><br>
+        <h2>Somar Números</h2>
+        <form>
+            <label for="numero1">Digite o primeiro número:</label>
+            <input type="number" name="numero1" id="numero1" class="input_number" required>
 
-            <label for="numero2" class="label" >Digite o segundo número:</label>
-            <input type="number" name="numero2" id="numero2" class="input_number"><br>
+            <label for="numero2" >Digite o segundo número:</label>
+            <input type="number" name="numero2" id="numero2" class="input_number" required>
 
-            <input type="submit" value="Somar" class="input_submit"><br>
+            <input type="submit" value="Somar" class="input_submit">
         </form>
 
             <?php
